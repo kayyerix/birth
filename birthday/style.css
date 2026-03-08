@@ -1,27 +1,37 @@
 body{
-font-family:Arial;
 margin:0;
+font-family:Arial;
+overflow:hidden;
+}
+
+.page{
+width:100vw;
+height:100vh;
+position:absolute;
+top:0;
+left:0;
+}
+
+.hidden{
+display:none;
 }
 
 .center{
 display:flex;
 justify-content:center;
 align-items:center;
-height:100vh;
 background:#ffe6f0;
 }
 
 .card{
 text-align:center;
 background:white;
-padding:30px 20px;
+padding:40px;
 border-radius:20px;
-box-shadow:0 10px 20px rgba(0,0,0,0.2);
 }
 
 .gift{
-width:50%;
-max-width:200px;
+width:200px;
 }
 
 button{
@@ -34,10 +44,13 @@ color:white;
 cursor:pointer;
 }
 
-body.chaos{
+#videoPage video{
+width:100%;
 height:100vh;
-overflow:hidden;
-font-family:Comic Sans MS;
+object-fit:cover;
+}
+
+body .chaos{
 background: linear-gradient(
 90deg,
 red,
@@ -68,17 +81,14 @@ text-shadow:3px 3px black;
 }
 
 .photo{
-.photo{
-width:80%;
-max-width:300px;
+width:300px;
 border-radius:20px;
 border:6px dashed yellow;
-}
 }
 
 .emoji{
 position:absolute;
-font-size:clamp(20px,6vw,40px);
+font-size:40px;
 animation:float 6s linear infinite;
 }
 
@@ -87,27 +97,21 @@ animation:float 6s linear infinite;
 100%{transform:translateY(-100px) rotate(360deg);}
 }
 
-.e1{left:10%; animation-duration:6s;}
-.e2{left:20%; animation-duration:7s;}
-.e3{left:30%; animation-duration:5s;}
-.e4{left:40%; animation-duration:8s;}
-.e5{left:55%; animation-duration:6s;}
-.e6{left:65%; animation-duration:7s;}
-.e7{left:80%; animation-duration:5s;}
-.e8{left:90%; animation-duration:6s;}
+.e1{left:10%}
+.e2{left:20%}
+.e3{left:30%}
+.e4{left:40%}
+.e5{left:55%}
+.e6{left:65%}
+.e7{left:80%}
+.e8{left:90%}
 
 #emojiJump{
 position:fixed;
 top:50%;
 left:50%;
-transform:translate(-50%,-50%) scale(0.5);
-font-size:clamp(120px,35vw,220px);
+transform:translate(-50%,-50%);
+font-size:220px;
 z-index:999;
-transition:opacity 0.5s, transform 0.3s;
-pointer-events:none;
+transition:opacity 0.5s;
 }
-
-h1{
-font-size:clamp(24px,6vw,40px);
-}
-

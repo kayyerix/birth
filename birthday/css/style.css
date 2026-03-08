@@ -1,0 +1,147 @@
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial;
+}
+
+body{
+overflow:hidden;
+}
+
+/* PAGE SYSTEM */
+
+.page{
+
+position:absolute;
+top:0;
+left:0;
+
+width:100%;
+height:100vh;
+
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+
+text-align:center;
+
+opacity:0;
+pointer-events:none;
+
+transition:opacity .4s;
+
+padding:20px;
+
+}
+
+.page.active{
+opacity:1;
+pointer-events:auto;
+}
+
+/* FOTO */
+
+.photo{
+
+width:80%;
+max-width:300px;
+
+border-radius:20px;
+
+margin-bottom:20px;
+
+}
+
+/* BUTTON */
+
+button{
+
+padding:14px 28px;
+
+font-size:16px;
+
+border:none;
+border-radius:10px;
+
+background:#ff4da6;
+
+color:white;
+
+cursor:pointer;
+
+}
+
+/* VIDEO */
+
+video{
+
+width:100%;
+height:100vh;
+
+object-fit:cover;
+
+}
+
+/* FINAL CHAOS PAGE */
+
+.chaos{
+
+background:linear-gradient(
+90deg,
+red,
+orange,
+yellow,
+green,
+cyan,
+blue,
+violet
+);
+
+background-size:400% 400%;
+animation:rainbow 5s linear infinite;
+
+color:white;
+
+}
+
+@keyframes rainbow{
+
+0%{background-position:0%}
+100%{background-position:100%}
+
+}
+
+/* EMOJI TERBANG */
+
+.emoji{
+
+position:absolute;
+
+font-size:40px;
+
+animation:float 6s linear infinite;
+
+}
+
+@keyframes float{
+
+0%{
+transform:translateY(100vh) rotate(0deg);
+}
+
+100%{
+transform:translateY(-100px) rotate(360deg);
+}
+
+}
+
+.e1{left:10%; animation-duration:6s;}
+.e2{left:20%; animation-duration:7s;}
+.e3{left:30%; animation-duration:5s;}
+.e4{left:40%; animation-duration:8s;}
+.e5{left:55%; animation-duration:6s;}
+.e6{left:65%; animation-duration:7s;}
+.e7{left:80%; animation-duration:5s;}
+.e8{left:90%; animation-duration:6s;}

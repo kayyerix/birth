@@ -8,7 +8,7 @@
 
 <body class="chaos">
 
-<audio autoplay>
+<audio id="bgMusic" preload="auto">
   <source src="sound/telkomsel.mp3" type="audio/mpeg">
 </audio>
 
@@ -33,16 +33,22 @@
 <div class="emoji e7">🍰</div>
 <div class="emoji e8">🎊</div>
 
-<script>
+  <script>
 
-setTimeout(()=>{
-document.getElementById("emojiJump").style.transform="translate(-50%,-50%) scale(1)";
-},50);
+const music = document.getElementById("bgMusic");
 
-setTimeout(()=>{
-document.getElementById("emojiJump").style.opacity="0";
-},700);
+window.onload = () => {
+
+  music.play().catch(()=>{});
+
+  setTimeout(()=>{
+    document.getElementById("emojiJump").style.opacity="0";
+  },700);
+
+};
+
 </script>
 
 </body>
+
 </html>
